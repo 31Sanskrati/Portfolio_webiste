@@ -28,9 +28,7 @@
     rgb(15, 238, 89) 100%
   );
   -webkit-background-clip: text;
-  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
   background-size: 100%;
   text-decoration: none;
   font-size: 35px;
@@ -199,6 +197,7 @@ a {
   text-decoration: none;
   color: white;
 }
+
 .info:hover,
 a:hover {
   color: rgb(15, 238, 89);
@@ -223,16 +222,14 @@ i {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
   }
   .nav__logo {
     margin-right: 70%;
   }
   .nav__items {
-    display: block;
     width: 100%;
-    align-items: center;
-    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .introduction {
     padding: 20px;
@@ -240,8 +237,11 @@ i {
     text-align: center;
     align-items: center;
   }
-  .introduction h1 {
-    font-size: 15px;
+  .introduction h1,
+  .contact h1,
+  .skill__section h1,
+  .education h1 {
+    font-size: 20px;
   }
   .introduction span {
     font-size: 30px;
@@ -249,5 +249,44 @@ i {
   .introduction p {
     font-size: 15px;
     margin-bottom: 5px;
+  }
+
+  #qualification th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .skill__section h1 {
+    margin-bottom: 15px;
+  }
+  .skill__list p {
+    font-size: 15px;
+    margin: 3px;
+  }
+  th {
+    padding-bottom: 5px;
+    font-size: 13px;
+  }
+  .info {
+    padding: 5px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    display: none;
+  }
+  img {
+    display: none;
+  }
+  .introduction {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 100%;
+  }
+  .education {
+    margin: 2px;
   }
 }
